@@ -6,6 +6,7 @@ body {
 .calculator-container {
   background-color: rgba(191, 223, 255, 0.618);
   border-style: solid;
+  height: 500px;
 }
 h1 {
   text-align: center;
@@ -105,4 +106,70 @@ h1 {
   width: 65%;
   border-radius: 15%;
   font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 1024px) {
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1fr;
+    grid-template-rows: 1.7fr 0.7fr 0.7fr 1.1fr;
+    grid-template-areas:
+      "butt butt butt"
+      "first . second"
+      ". equal ."
+      ". clear .";
+  }
+  h1 {
+    font-size: 40px;
+  }
+
+  .box1 {
+    grid-area: first;
+  }
+
+  .box2 {
+    grid-area: second;
+  }
+
+  .clear {
+    grid-area: clear;
+  }
+  .equal {
+    grid-area: equal;
+  }
+
+  .buttons {
+    grid-area: butt;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .calculator {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr 1fr;
+    grid-template-rows: 1.7fr 0.7fr 0.7fr 1.1fr;
+    grid-template-areas:
+      "butt butt butt"
+      "first . second"
+      "equal equal equal"
+      "clear clear clear";
+  }
+
+  .box1 {
+    grid-area: first;
+  }
+
+  .box2 {
+    grid-area: second;
+  }
+
+  .clear {
+    grid-area: clear;
+  }
+  .equal {
+    grid-area: equal;
+  }
+
+  .buttons {
+    grid-area: butt;
+  }
 }
