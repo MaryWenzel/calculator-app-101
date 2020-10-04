@@ -1,5 +1,108 @@
 body {
-  margin: 20% auto;
+  margin: auto;
   width: 50%;
+}
+
+.calculator-container {
+  background-color: rgba(191, 223, 255, 0.618);
+  border-style: solid;
+}
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  background-color: black;
+  font-family: "Montserrat", sans-serif;
+}
+
+.calculator {
+  height: 500px;
+  /* width: 50%; */
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 1.2fr 1fr 0.9fr;
+  grid-template-rows: 1.7fr 0.7fr 0.6fr 1fr;
+  grid-template-areas:
+    "butt butt butt butt butt"
+    "first first . second second"
+    ". . equal . . "
+    ". . clear . . ";
+}
+
+.butt {
+  width: 25%;
+  height: 45%;
+  border-radius: 80%;
+  font-size: 40px;
+  color: black;
+  background-color: rgb(148, 205, 255);
+  font-family: "Montserrat", sans-serif;
+}
+
+.input {
+  text-align: center;
+  font-size: 30px;
+}
+
+.box1 {
+  grid-area: first;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box2 {
+  grid-area: second;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  color: rgb(145, 0, 0);
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+}
+
+.equal {
+  font-size: 30px;
+  grid-area: equal;
+  height: 80%;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.clear {
+  grid-area: clear;
   height: 75%;
+  border-radius: 50%;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(148, 205, 255);
+}
+
+.buttons {
+  grid-area: butt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#first-Number {
+  height: 75%;
+  width: 65%;
+  border-radius: 15%;
+  font-family: "Montserrat", sans-serif;
+}
+
+#second-Number {
+  height: 75%;
+  width: 65%;
+  border-radius: 15%;
+  font-family: "Montserrat", sans-serif;
 }
